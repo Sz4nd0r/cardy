@@ -1,0 +1,88 @@
+:root {
+    --black: hsla(30, 11%, 4%, 1);
+    --jet-black: hsla(199, 27%, 18%, 1);
+    --lavender: hsla(264, 20%, 85%, 1);
+    --green-yellow: hsla(84, 92%, 71%, 1);
+    --electric-aqua: hsla(185, 100%, 49%, 1);
+    --dark-khaki: hsla(40, 34%, 19%, 1);
+    --dusty-mauve: hsla(342, 17%, 54%, 1);
+    --electric-royal: hsla(237, 97%, 27%, 1);
+    --platinum: hsla(0, 0%, 93%, 1);
+    --cloudy-sky: hsla(212, 70%, 62%, 1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+    color: var(--black);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+footer {
+    width: 100%;
+    font-family: Monserrat, Arimo, Verdana, sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--lavender);
+
+    header {
+        height: 130px;
+        width: 100%;
+        background-color: var(--electric-aqua);
+        background: linear-gradient(90deg, var(--cloudy-sky) 0% 10%, var(--electric-aqua), var(--cloudy-sky) 90% 100%);
+
+        h1>span {
+            border-radius: 7px;
+            padding: 5px;
+            background-color: var(--black);
+            color: var(--platinum);
+            animation: opacity-grad 5s ease-in-out 0s infinite forwards;
+        }
+    }
+
+    main {
+        display: grid;
+        background-color: var(--lavender);
+        /* height: 100vh; */
+        grid-template-columns: 2fr 1fr;
+        overflow: hidden;
+        /*when the page is closed (means the height of the main is 0, the cards will be hidden)*/
+
+        section {
+            width: 100%;
+            background-color: transparent;
+        }
+
+        aside {
+            width: 100%;
+            background-color: var(--platinum);
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+    footer {
+        background-color: var(--jet-black);
+        padding: 30px;
+    }
+}
