@@ -55,17 +55,17 @@ body {
             padding: 5px;
             background-color: var(--black);
             color: var(--platinum);
-            animation: opacity-grad 5s ease-in-out 0s infinite forwards;
+            animation: opacity-grad 5s ease-in-out 2s infinite forwards;
+            cursor: pointer;
         }
     }
 
     main {
         display: grid;
         background-color: var(--lavender);
-        /* height: 100vh; */
         grid-template-columns: 2fr 1fr;
         overflow: hidden;
-        /*when the page is closed (means the height of the main is 0, the cards will be hidden)*/
+        /*when the page is closed (means the height of the main is 0), the cards will be hidden*/
 
         section {
             width: 100%;
