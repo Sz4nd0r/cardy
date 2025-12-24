@@ -1,0 +1,5 @@
+#rotate-card {
+    background-color: var(--cloudy-sky);
+    display: grid;
+    place-items: center;
+}
