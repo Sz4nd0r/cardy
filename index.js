@@ -1,12 +1,17 @@
 const startButton = document.getElementById('start-btn')
 const mainCardsGame = document.querySelector('main')
 const cardsContainer = document.getElementById('cards__container')
+const header = document.querySelector('header')
+const footer = document.querySelector('footer')
 
-const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms)); // Important function also used in rotate card 
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 //Makes the main section hidden at the beginning and show it after clicking the start button
 mainCardsGame.style.height = '0'
 mainCardsGame.style.display = 'none'
+header.style.minHeight = footer.style.minHeight = '50vh'
+
+
 
 if (mainCardsGame.style.display === 'none') {
     startButton.addEventListener('click', openCardsGame)
@@ -15,8 +20,11 @@ if (mainCardsGame.style.display === 'none') {
 async function openCardsGame() {
     mainCardsGame.style.display = 'grid'
     mainCardsGame.style.animation = 'open-main-cards 1s ease-in-out 0.3s 1'
+    header.style.animation = footer.style.animation = 'shrink 1s ease-in-out 0.3s 1'
     await sleep(1000) //takes 1 second because that's the exact time of the animation
-    mainCardsGame.style.height = '100vh' //Now is 100vh but It'll be fit-content or something similar when the number of cards grows
+    mainCardsGame.style.minHeight = '100vh' //minHeight instead of height ensures the main section height fits the content
+    header.style.minHeight = footer.style.minHeight = '0vh'
+
 }
 
 //This adds the start button a hover effect on desktops
@@ -43,12 +51,16 @@ class Card {
     }
 }
 
-let cards = [] //Should remember to push my cards after creating them in a separated file
+let cards = [] //Should remember to push the cards after creating them in a separated file
+
+function cardFunction() { }
 
 document.addEventListener('DOMContentLoaded', () => { //waits untill the cards are creaated
     for (let i = 0; i < cards.length; i++) {
         cards[i].element.addEventListener('click', () => {
-            return cards[i].mainFunction()
+            return cardFunction = cards[i].mainFunction()
         }) //When the user clicks on a card the card is selected and the app can perform the desired operations
     }
 })
+
+cardFunction()

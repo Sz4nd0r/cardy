@@ -30,22 +30,12 @@
     }
 }
 
-@keyframes rotate-left {
+@keyframes shrink {
     0% {
-        transform: rotate(0deg);
+        min-height: 50vh;
     }
 
     100% {
-        transform: rotate(-360deg);
-    }
-}
-
-@keyframes rotate-right {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
+        min-height: 0vh;
     }
 }
