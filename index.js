@@ -52,4 +52,3 @@ document.addEventListener('DOMContentLoaded', () => { //waits untill the cards a
         }) //When the user clicks on a card the card is selected and the app can perform the desired operations
     }
 })
-
