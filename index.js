@@ -23,6 +23,7 @@ async function openCardsGame() {
     header.style.animation = footer.style.animation = 'shrink 1s ease-in-out 0.3s 1'
     await sleep(1000) //takes 1 second because that's the exact time of the animation
     mainCardsGame.style.minHeight = '100vh' //minHeight instead of height ensures the main section height fits the content
+    mainCardsGame.style.height = 'auto'
     header.style.minHeight = footer.style.minHeight = '0vh'
 
 }
@@ -52,15 +53,3 @@ class Card {
 }
 
 let cards = [] //Should remember to push the cards after creating them in a separated file
-
-function cardFunction() { }
-
-document.addEventListener('DOMContentLoaded', () => { //waits untill the cards are creaated
-    for (let i = 0; i < cards.length; i++) {
-        cards[i].element.addEventListener('click', () => {
-            return cardFunction = cards[i].mainFunction()
-        }) //When the user clicks on a card the card is selected and the app can perform the desired operations
-    }
-})
-
-cardFunction()
