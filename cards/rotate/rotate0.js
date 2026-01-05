@@ -23,7 +23,7 @@ const FRICTION = 0.96;     // Air resistance (1 = no friction, 0.9 = high fricti
 const MAX_SPEED = 0.8;     // Cap the speed so it doesn't fly off
 
 // --- CONTROL LOGIC ---
-function initPhysics() {
+function rotate() {
     rotateCard.addEventListener('mousedown', () => {
         isMouseDown = true;
         // Start the loop if it's not already running
@@ -74,4 +74,4 @@ const loop = () => {
 }
 
 // Start
-initPhysics();
+rotate();
