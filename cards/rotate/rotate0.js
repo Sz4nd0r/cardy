@@ -61,6 +61,7 @@ const loop = () => {
 
     // 4. Render
     rotateCard.style.transform = `rotate(${angle}rad)`;
+    rotateCard.style.borderRadius = `${velocity * 250}px`;
 
     // 5. Loop Management
     // Keep running if we are holding the mouse OR if the card is still spinning fast enough

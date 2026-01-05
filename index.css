@@ -47,8 +47,8 @@ body {
     header {
         height: 130px;
         width: 100%;
-        background-color: var(--electric-aqua);
-        background: linear-gradient(90deg, var(--cloudy-sky) 0% 10%, var(--electric-aqua), var(--cloudy-sky) 90% 100%);
+        background-color: var(--cloudy-sky);
+        background-image: radial-gradient(at 10% 10%, var(--electric-aqua) 0px, transparent 50%), radial-gradient(at 130% 90%, var(--electric-royal) 0px, transparent 50%);
 
         h1>span {
             border-radius: 7px;
@@ -61,9 +61,7 @@ body {
     }
 
     main {
-        display: grid;
         background-color: var(--lavender);
-        grid-template-columns: 2fr 1fr;
         overflow: hidden;
         /*when the page is closed (means the height of the main is 0), the cards will be hidden*/
 
@@ -75,7 +73,7 @@ body {
             align-items: center;
             justify-content: flex-start;
             gap: 40px;
-            padding: 40px;
+            padding: 60px 30px 20px;
         }
 
         aside {
@@ -88,7 +86,13 @@ body {
     }
 
     footer {
-        background-color: var(--jet-black);
+        background-color: var(--cloudy-sky);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding: 30px;
+        background-image:
+            radial-gradient(at 130% 10%, var(--electric-royal) 0px, transparent 50%),
+            radial-gradient(at 10% 90%, var(--electric-aqua) 0px, transparent 50%);
     }
 }
